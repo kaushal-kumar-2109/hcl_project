@@ -1,0 +1,664 @@
+.userarea{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.userarea .comapnytitle{
+    height: auto;
+    width: 100%;
+    padding: 4rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: black;
+}
+.userarea .userbio{
+    height: 20rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+.profilepic,.bio{
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
+}
+.profilepic{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profilepic img{
+    height: 100%;
+    width: 15rem;
+}
+.userarea .userbio .bio{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.userarea .userbio .bio h4{
+    width: 100%;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+.userarea .userbio .bio a{
+    display: flex;
+    height: 1rem;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+}
+.comapnytitle,.userbio{
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 2px solid gray;
+    border-style:inset;
+    margin: 1rem;
+}
+
+.userarea .earning{
+    width: 100%;
+    display: flex;
+    padding: 0.5rem 2rem;
+    margin: 2rem;
+}
+.userarea .earning h5{
+    width: 100%;
+    font-weight: bold;
+}
+
+                    /* product css            */
+
+
+.products{
+    
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 2px solid gray;
+}
+.products .fullcard{
+    width: 20%;
+    border-bottom: 2px solid gray;
+    border-style:inset;
+    margin: 3rem;
+    height: auto;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 2px 4px 8px black;
+}
+.products .fullcard .image{
+    height: 10rem;
+    width: 100%;
+    object-fit: cover;
+    background-color:transparent;
+    border-bottom: 2px solid gray;
+    padding: 0.3rem;
+}
+.products .fullcard .image img{
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    object-fit: cover;
+}
+.products .fullcard .function{
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    margin-top: 0.4rem;
+    justify-content: end;
+}
+.products .fullcard .function img{
+    height: 100%;
+    width: 2rem;
+    background:transparent;
+}
+
+#show{
+    rotate: 180deg;
+    display: flex;
+}
+#hide{
+    display: none;
+    rotate: 90deg;
+}
+.product_data{
+    width: 100%;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0.5rem;
+    border-top: 2px solid gray;
+}
+#show{
+    rotate: -0deg;
+}
+#show:checked ~ .product_data {
+    display:flex;
+}
+.product_data .pdata{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0.5rem;
+    border-bottom: 2px solid gray;
+}
+.product_data .pdata h5{
+    width: 100%;
+}
+.product_data .option{
+    padding: 1rem 0.5rem;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.option a{
+    width: 40%;
+}
+.option button{
+    width: 100%;
+}
+
+.products{
+    width: 100%;
+    padding: 4rem 10%;
+    display: flex;
+}
+/*                    add new product form */
+.products select{
+    width: 95%;
+    height: 2rem;
+    padding: 0 0.5rem;
+}
+
+.dependOnOptions{
+    width: 100%;
+    height: auto;
+    display: none;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+    border: 2px solid gray;
+    padding: 1rem 1rem;
+}
+.show{
+    display: flex;
+}
+.dependOnOptions .inputpart{
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+}
+.dependOnOptions .inputpart label{
+    border: 0;
+    font-weight: bold;
+    font-size: 20px;
+    width: 95%;
+}
+.dependOnOptions .inputpart input{
+    border: 0;
+    width: 95%;
+    border-bottom: 2px solid gray;
+}
+
+/*                    deletion product css         */
+
+.conformdelte{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 4rem 4rem;
+    flex-wrap: wrap;
+}
+.conformdelte h4{
+    padding: 1rem 4rem;
+    background-color: rgba(255, 0, 0, 0.678);
+
+}
+.conformdelte .productToDelete{
+    padding: 4rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.conformdelte a{
+    background:transparent;
+    padding: 0.5rem 1rem;
+    height: 3rem;
+    margin-top: 3rem;
+    width: 30%;
+}
+.conformdelte button{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(255, 0, 0, 0.662);
+}
+.conformdelte button:hover{
+    background-color:rgba(255, 0, 0, 0.862);
+}
+.conformdelte .productToDelete .imageOfProduct{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(255, 0, 0, 0.662);
+    box-shadow: 4px 4px 8px black;
+    border: 2px solid gray;
+    border-left-width:0 ;
+    border-top-width:0 ;
+    
+}
+.conformdelte .productToDelete .imageOfProduct img{
+    height: 95%;
+    width: 95%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius:50%;
+    border-top-right-radius: 50%;
+}
+.conformdelte .productToDelete .productdata{
+    position:absolute;
+    width: 200px;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap ;
+
+}
+.conformdelte .productToDelete .productdata h5{
+    position:absolute;
+    background-color:rgba(0, 102, 255, 0.662);
+    height: auto;
+    padding: 0.5rem 1rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    display: flex;
+}
+.conformdelte .productToDelete .productdata .name{
+    margin-top: 400px;
+    width: 200px;
+}
+.conformdelte .productToDelete .productdata .price{
+    margin-left: 400px;
+    width: 90px;
+}
+.conformdelte .productToDelete .productdata .discount{
+    margin-top: -120px;
+    margin-left: 375px;
+    width: 90px;
+}
+.conformdelte .productToDelete .productdata .material{
+    margin-top: -240px;
+    margin-left: 300px;
+    width: 90px;
+}
+.conformdelte .productToDelete .productdata .quantity{
+    margin-top: 120px;
+    margin-left: 385px;
+    width: 90px;
+}
+.conformdelte .productToDelete .productdata .dimand{
+    margin-top: 240px;
+    margin-left: 325px;
+    width: 90px;
+}
+
+
+
+/*    user.user css     */
+
+
+
+.userarea{
+    display: flex;
+    width: 100%;
+    padding: 1rem 4rem 4rem 4rem;
+    background-color: rgb(197, 192, 192);
+    margin-bottom:rem;
+}
+.userarea .uright{
+    width: 25%;
+    padding: 0rem 0.4rem 0rem 0rem;
+    margin-left:3px;
+}
+.userarea .uright .userpic{
+    display: flex;
+    padding: 0.3rem;
+    background-color: white;
+    height: 4.5rem;
+    width: 100%;
+    box-shadow: 2px 2px 10px gray;
+    border: 1px solid rgb(160, 158, 158);
+}
+.userarea .uright .userpic img{
+    height: 4rem;
+    width: 4rem;
+    background-color: gray;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px gray;
+}
+.userarea .uright .userpic .text{
+    margin-left: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.userarea .uright .userpic .text p,h4{
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 3px;
+}
+.userarea .uright .userdata{
+    height:100%;
+    width: 100%;
+    margin-top: 1rem;
+    box-shadow: 2px 2px 10px gray;
+    border: 1px solid rgb(160, 158, 158);
+    background-color: white;
+}
+.userarea .uright .userdata .dcard{
+    opacity: 0.5;
+    display: flex;
+    width: 100%;
+    height: 3.5rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(168, 165, 165, 0.998);
+}
+
+.userarea .uright .userdata .dcard:hover{
+    opacity: 0.7;
+}
+.userarea .uright .userdata .dcard .image,.direction{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.userarea .uright .userdata .dcard .image svg,.direction svg{
+    height: 1.5rem;
+}
+.userarea .uright .userdata .dcard a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.userarea .uright .userdata .dcard .text{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+
+.userarea .uuserleft{
+    width: 70%;
+    height: 42rem;
+    background-color: white;
+    margin-left: 1rem;
+    padding: 2.5rem 2.5rem;
+    box-shadow: 2px 2px 10px gray;
+    border: 1px solid rgb(160, 158, 158);
+    overflow-y: hidden;
+}
+.userarea .uuserleft h2 a{
+    color:blue;
+}
+
+.userarea .uuserleft h4 a{
+    margin-top: 0.3rem;
+    font-size: medium;
+}
+.userarea .uuserleft fieldset{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.userarea .uuserleft fieldset input{
+    height: 3rem;
+    width: 10rem;
+}
+.userarea .uuserleft fieldset .gender {width: 100%;margin-top: 3rem;}
+.userarea .uuserleft fieldset .gender input{
+    height: 1rem;
+    margin-right:1rem ;
+    width: 1rem;
+}
+.userarea .uuserleft fieldset button{
+    margin-top: 3rem;
+    height: 2rem;
+    width: 5rem;
+}
+#addressdata{
+    display: none;
+}
+#profiledata{
+    display: flex;
+}
+
+.alladdress{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:start;
+    align-items:start;
+}
+.alladdress .pcard{
+    padding: 1rem;
+    width: 20rem;
+    height: 13rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px gray;
+    overflow-y: hidden;
+}
+.alladdress .pcard:hover{
+    overflow-y: auto;
+}
+.alladdress .pcard p{
+    display: flex;
+    color: gray;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+    background-color: rgb(181, 177, 177);
+    width: 3rem;
+}
+.alladdress .pcard a{
+    margin-top: 1rem;
+    
+}
+.userarea .uuserleft:hover{
+    overflow-y:auto;
+}
+
+.userarea .uuserleft .data{
+    padding: 2rem 1rem 1rem 3rem;
+    width: 100%;
+}
+.userarea .uuserleft .data a{
+    width: 1rem;
+}
+
+
+/* add new address form  */
+
+.addressform{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem 4rem;
+}
+.addressform form{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: auto;
+    padding: 0 1rem;
+}
+.addressform form div{
+    width: 50%;
+}
+.addressform form div input{
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid gray;
+}
+
+.addressform form .button{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.addressform form .button button{
+    width: 10rem;
+}
+
+
+
+/*               My order page css  */
+
+.myorderbody h2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Brush Script MT;
+    font-weight: bold;
+    font-size: 3rem;
+    color: black;
+}
+.myorderbody h3{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: Brush Script MT;
+    font-size: 2rem;
+    color: black;
+}
+
+.myorderbody{
+    background-color:white;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.myorderbody .orderleftarea{
+    width:70%;
+    background-color: white;
+    height: 100%;
+    padding: 1rem;
+    /* background-color: rgb(188, 186, 186);
+    border: 1px solid rgb(120, 119, 119);
+    box-shadow: 1px 1px 10px gray; */
+}
+.myorderbody .orderrightarea{
+    width: 30%;
+    height: auto;
+    margin-left:65%;
+    margin-top:3rem;
+    position: absolute;
+    /* background-color: rgb(188, 186, 186);
+    border: 1px solid gray;
+    box-shadow: 1px 1px 10px gray; */
+}
+.myorderbody .orderrightarea img{
+    height: 35rem;
+    width: 100%;
+}
+.myorderbody .undeliverorder{
+    height:auto;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content:flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.myorderbody .undeliverorder:hover{
+    overflow: auto;
+}
+.myorderbody .undeliverorder .ordercard{
+    height: auto;
+    width: 18rem;
+    padding: 1rem;
+    margin: 1rem 2rem;
+    background-color: rgb(206, 206, 206);
+    border: 1px solid gray;
+    box-shadow: 1px 1px 10px gray;
+}
+.myorderbody .undeliverorder .ordercard .allorderproducts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid rgb(66, 65, 65);
+    border-right: 0;
+    flex-wrap: wrap;
+    border-left: 0;
+    padding: 0.5rem;
+    height: 10rem; 
+    width:100%; 
+    overflow: hidden;
+}
+.myorderbody .undeliverorder .ordercard .allorderproducts .pro{
+    height: 4rem;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+.myorderbody .undeliverorder .ordercard .allorderproducts .pro img{
+    height: 3rem;
+    width: 3rem;
+    margin-right: 0.5rem;
+}
+.myorderbody .undeliverorder .ordercard .headers a{
+    color: rgba(12, 12, 240, 0.616);
+    font-size: 1rem;
+}
+.myorderbody .undeliverorder .ordercard .headers a:hover{
+    color: rgb(0, 0, 255);
+    font-size: 1.1rem;
+}

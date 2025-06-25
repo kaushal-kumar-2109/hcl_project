@@ -1,0 +1,337 @@
+{%extends "comman.html"%}
+{%block body%}
+    <div class="userarea">
+        <div class="comapnytitle">
+            <h1>{{data[0][3].upper()}} </h1>
+        </div>
+
+        <div class="userbio">
+            <div class="profilepic">
+                <img src="{{url_for('static', filename='/image/user.png')}}" alt="User Profile Picture">
+            </div>
+            <div class="bio">
+                <h4>Name : </h4><a>{{data[0][1].upper()}} {{data[0][2].upper()}}</a>
+                <h4>Email : </h4><a>{{data[0][5]}}</a>
+                <h4>Phone No. : </h4><a>{{data[0][4]}}</a>
+            </div>
+        </div>
+
+        <div class="products registerform">
+
+            {% if length<= 1:%} 
+            <form method="post" action="http://127.0.0.1:5000/admin/{{data[0][0]}}/adding">
+
+                <div class="part">
+                    <label for="name" id="name">Name<a>*</a> :</label>
+                    <input id="name" type="text" name="name" placeholder="Product name" required>
+
+                    <label for="price" id="price">Price<a>*</a> :</label>
+                    <input id="price" type="number" name="price" placeholder="XXX" required>
+
+                    <label for="material">Category<a>*</a> :</label>
+                    <select name="catagory" id="category">
+                        <option></option>
+                        <option>Fashion</option>
+                        <option>Health-Care</option>
+                        <option>Toys</option>
+                        <option>Daily Use</option>
+                    </select>
+
+                </div>
+                <div class="part">
+                    <label for="discount" id="discount">Discount<a>*</a> :</label>
+                    <input id="discount" type="number" name="discount" placeholder="XX" required>
+
+                    <label for="quantity" id="quantity">Quantity<a>*</a> :</label>
+                    <input id="quantity" type="number" name="quantity" placeholder="XX" required>
+
+                    <label for="image" id="image">image<a>*</a> :</label>
+                    <input id="image" type="text" name="image" placeholder="Enter the image link.">
+                </div>
+
+
+                <div class="dependOnOptions ifFashion" id="ifFashion">
+                    <div class="inputpart">
+                        <label for="color" id="color">Color<a>*</a> :</label>
+                        <input id="color" type="text" name="fashioncolor" placeholder="Color name" required value="none">
+                    </div>
+                    <div class="inputpart">
+                        <label for="size" id="size">Size<a>*</a> :</label>
+                        <select name="fashionsize" required>
+                            <option>none</option>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+                            <option>XXL</option>
+                        </select>
+                    </div>
+                    <div class="inputpart">
+                        <label for="company" id="company">Comapany<a>*</a> :</label>
+                        <input type="text" id="company" name="fashioncompany" placeholder="Adidas,Zara etc (one at a time)" required value="none">
+                    </div>
+                    <div class="inputpart">
+                        <label for="pcategory" id="size">Catagory<a>*</a> :</label>
+                        <select name="fashionpcategory" required>
+                            <option>none</option>
+                            <option>Men</option>
+                            <option>Women</option>
+                            <option>Kids</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="dependOnOptions HealthCare" id="HealthCare">
+                    <div class="inputpart">
+                        <label for="size" id="weight">Wheight<a>*</a> :</label>
+                        <input for="weight" id="weight" type="text" name="healthweight" placeholder="10, 20, 50 etc(one at time)" required value="none">
+                    </div>
+                    <div class="inputpart">
+                        <label for="usetype" id="usetype">UseType<a>*</a> :</label>
+                        <select name="healthusertype" required>
+                            <option>none</option>
+                            <option>Daily</option>
+                            <option>Summar</option>
+                            <option>Winter</option>
+                        </select>
+                    </div>
+                    <div class="inputpart">
+                        <label for="company" id="company">Comapany<a>*</a> :</label>
+                        <input type="text" id="company" name="healthcompany" placeholder="Adidas,Zara etc (one at a time)" required value="none">
+                    </div>
+                    <div class="inputpart">
+                        <label for="pcategory" id="size">Catagory<a>*</a> :</label>
+                        <select name="healthpcategory" required>
+                            <option>none</option>
+                            <option>Men</option>
+                            <option>Women</option>
+                            <option>Kids</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="dependOnOptions toys" id="addtoys">
+                    <div class="inputpart">
+                        <label for="size" id="weight">Wheight<a>*</a> :</label>
+                        <input for="weight" id="weight" type="text" name="toyweight" placeholder="10, 20, 50 etc(one at time)" required value="none">
+                    </div>
+                    <div class="inputpart">
+                        <label for="agelimit" id="agelimit">Age Limit<a>*</a> :</label>
+                        <select name="toyagelimit" required>
+                            <option>none</option>
+                            <option>Below 5</option>
+                            <option>Below 10</option>
+                            <option>Below 16</option>
+                            <option>More then 17</option>
+                        </select>
+                    </div>
+                    <div class="inputpart">
+                        <label for="company" id="company">Comapany<a>*</a> :</label>
+                        <input type="text" id="company" name="toycompany" placeholder="Adidas,Zara etc (one at a time)" required value="none">
+                    </div>
+                    <div class="inputpart">
+                        <label for="pcategory" id="size">Catagory<a>*</a> :</label>
+                        <select name="toypcategory" required>
+                            <option>none</option>
+                            <option>Girls</option>
+                            <option>Boys</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="dependOnOptions dailyuse" id="dailyuse">
+                    <div class="inputpart">
+                        <label for="size" id="weight">Wheight<a>*</a> :</label>
+                        <input for="weight" id="weight" type="text" name="dailyweight" placeholder="10, 20, 50 etc(one at time)" required value="none">
+                    </div>
+                    <!-- <div class="inputpart">
+                        <label for="agelimit" id="agelimit">Age Limit* :</label>
+                        <select required>
+                            <option>Below 5</option>
+                            <option>Below 10</option>
+                            <option>Below 16</option>
+                            <option>More then 17</option>
+                        </select>
+                    </div> -->
+                    <div class="inputpart">
+                        <label for="company" id="company">Comapany<a>*</a> :</label>
+                        <input type="text" id="company" name="dailycompany" placeholder="Adidas,Zara etc (one at a time)" required value="none">
+                    </div>
+                    <!-- <div class="inputpart">
+                        <label for="pcategory" id="size">Catagory* :</label>
+                        <select required>
+                            <option>Girls</option>
+                            <option>Boys</option>
+                        </select>
+                    </div> -->
+                </div>
+
+                <div class="submit">
+                    <button type="submit">Add</button>
+                </div>
+
+            </form>
+
+
+            {% else :%}
+
+            <form method="post" action="http://127.0.0.1:5000/admin/{{pdata[1][1]}}/edit/{{pdata[1][0]}}">
+
+                <div class="part">
+                    <label for="name" id="name">Name<a>*</a> :</label>
+                    <input id="name" type="text" name="name" placeholder="Product name" required value="{{pdata[1][2]}}">
+
+                    <label for="price" id="price">Price<a>*</a> :</label>
+                    <input id="price" type="number" name="price" placeholder="XXX" required value="{{pdata[1][3]}}">
+
+                    <label for="material">Category<a>* Select Again</a> : </label>
+                    <select name="catagory" id="category">
+                        <option></option>
+                        <option>Fashion</option>
+                        <option>Health-Care</option>
+                        <option>Toys</option>
+                        <option>Daily Use</option>
+                    </select>
+
+                </div>
+                <div class="part">
+                    <label for="discount" id="discount">Discount<a>*</a> :</label>
+                    <input id="discount" type="number" name="discount" placeholder="XX" required value="{{pdata[1][5]}}">
+
+                    <label for="quantity" id="quantity">Quantity<a>*</a> :</label>
+                    <input id="quantity" type="number" name="quantity" placeholder="XX" required value="{{pdata[1][6]}}">
+
+                    <label for="image" id="image">image<a>*</a> :</label>
+                    <input id="image" type="text" name="image" placeholder="Enter the image link." value="{{pdata[1][7]}}">
+                </div>
+
+
+                <div class="dependOnOptions ifFashion" id="ifFashion">
+                    <div class="inputpart">
+                        <label for="color" id="color">Color<a>*</a> :</label>
+                        <input id="color" type="text" name="fashioncolor" placeholder="Color name" required value="{{pdata[1][8]}}">
+                    </div>
+                    <div class="inputpart">
+                        <label for="size" id="size">Size<a>* select Again</a> :</label>
+                        <select name="fashionsize" required>
+                            <option>none</option>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+                            <option>XXL</option>
+                        </select>
+                    </div>
+                    <div class="inputpart">
+                        <label for="company" id="company">Comapany<a>*</a> :</label>
+                        <input type="text" id="company" name="fashioncompany" placeholder="Adidas,Zara etc (one at a time)" required value="{{pdata[1][10]}}">
+                    </div>
+                    <div class="inputpart">
+                        <label for="pcategory" id="size">Catagory<a>* Select Again</a> :</label>
+                        <select name="fashionpcategory" required>
+                            <option>none</option>
+                            <option>Men</option>
+                            <option>Women</option>
+                            <option>Kids</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="dependOnOptions HealthCare" id="HealthCare">
+                    <div class="inputpart">
+                        <label for="size" id="weight">Wheight<a>*</a> :</label>
+                        <input for="weight" id="weight" type="text" name="healthweight" placeholder="10, 20, 50 etc(one at time)" required value="{{pdata[1][12]}}">
+                    </div>
+                    <div class="inputpart">
+                        <label for="usetype" id="usetype">UseType<a>*Select Again</a> :</label>
+                        <select name="healthusertype" required>
+                            <option>none</option>
+                            <option>Daily</option>
+                            <option>Summar</option>
+                            <option>Winter</option>
+                        </select>
+                    </div>
+                    <div class="inputpart">
+                        <label for="company" id="company">Comapany<a>*</a> :</label>
+                        <input type="text" id="company" name="healthcompany" placeholder="Adidas,Zara etc (one at a time)" required value="{{pdata[1][10]}}">
+                    </div>
+                    <div class="inputpart">
+                        <label for="pcategory" id="size">Catagory<a>*Select Again</a> :</label>
+                        <select name="healthpcategory" required>
+                            <option>none</option>
+                            <option>Men</option>
+                            <option>Women</option>
+                            <option>Kids</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="dependOnOptions toys" id="addtoys">
+                    <div class="inputpart">
+                        <label for="size" id="weight">Wheight<a>*</a> :</label>
+                        <input for="weight" id="weight" type="text" name="toyweight" placeholder="10, 20, 50 etc(one at time)" required value="{{pdata[1][12]}}">
+                    </div>
+                    <div class="inputpart">
+                        <label for="agelimit" id="agelimit">Age Limit<a>*Select Again</a> :</label>
+                        <select name="toyagelimit" required>
+                            <option>none</option>
+                            <option>Below 5</option>
+                            <option>Below 10</option>
+                            <option>Below 16</option>
+                            <option>More then 17</option>
+                        </select>
+                    </div>
+                    <div class="inputpart">
+                        <label for="company" id="company">Comapany<a>*</a> :</label>
+                        <input type="text" id="company" name="toycompany" placeholder="Adidas,Zara etc (one at a time)" required value="{{pdata[1][10]}}">
+                    </div>
+                    <div class="inputpart">
+                        <label for="pcategory" id="size">Catagory<a>*Select Again</a> :</label>
+                        <select name="toypcategory" required>
+                            <option>none</option>
+                            <option>Girls</option>
+                            <option>Boys</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="dependOnOptions dailyuse" id="dailyuse">
+                    <div class="inputpart">
+                        <label for="size" id="weight">Wheight<a>*</a> :</label>
+                        <input for="weight" id="weight" type="text" name="dailyweight" placeholder="10, 20, 50 etc(one at time)" required value="{{pdata[1][12]}}">
+                    </div>
+                    <!-- <div class="inputpart">
+                        <label for="agelimit" id="agelimit">Age Limit* :</label>
+                        <select required>
+                            <option>Below 5</option>
+                            <option>Below 10</option>
+                            <option>Below 16</option>
+                            <option>More then 17</option>
+                        </select>
+                    </div> -->
+                    <div class="inputpart">
+                        <label for="company" id="company">Comapany<a>*</a> :</label>
+                        <input type="text" id="company" name="dailycompany" placeholder="Adidas,Zara etc (one at a time)" required value="{{pdata[1][10]}}">
+                    </div>
+                    <!-- <div class="inputpart">
+                        <label for="pcategory" id="size">Catagory* :</label>
+                        <select required>
+                            <option>Girls</option>
+                            <option>Boys</option>
+                        </select>
+                    </div> -->
+                </div>
+
+                <div class="submit">
+                    <button>UPDATE</button>
+                </div>
+
+            </form>
+            {%endif%}
+
+        </div>
+    </div>
+    
+{%endblock%}

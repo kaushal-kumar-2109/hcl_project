@@ -1,0 +1,56 @@
+{%extends "comman.html"%}
+{%block body%}
+
+    
+
+<style>
+    label{
+        display: flex;
+    }
+    label a{
+        color:red;
+        width: 1rem;
+    }
+</style>
+
+    <div class="registerform">
+        <form action="http://127.0.0.1:5000/user/submit" method="post">
+            
+            <div class="part">
+                <label for="name" id="name">Name<a>*</a> : </label>
+                <input type="text" id="name" name="name" placeholder="Enter Your name" required>
+                
+                <label for="company" id="company">Company<a>*</a> : </label>
+                <input type="text" id="company" name="company" placeholder="Enter Your company name" required>
+
+                <label for="comadd1" id="comadd1">Address(primary)<a>*</a> : </label>
+                <input type="text" id="comadd1" name="comadd1" placeholder="Enter Your Company Address" required>
+
+                <label for="emailotp" id="emailotp">Email OTP<a>*</a> : </label>
+                <input type="text" id="email" name="email" placeholder="abc@gmail.com" value="{{data[1]}}" style="display: none;">
+                <input type="text" id="emailotp" name="emailotp" placeholder="XXX-XXX">
+            </div>
+            <div class="part">
+                <label for="surname" id="surname">Surname : </label>
+                <input type="text" id="surname" name="surname" placeholder="Enter Your surname">
+
+                <label for="password" id="password">Password<a>*</a> : </label>
+                <input type="password" id="password" name="password" placeholder="**********" required> 
+
+                <label for="comadd2" id="comadd2">Address 2(optional) : </label>
+                <input type="text" id="comadd2" name="comadd2" placeholder="Enter Your company Address" required value="None">
+                
+                <label for="numberotp" id="numberotp">Mobile No. OTP<a>*</a> : </label>
+                <input type="text" id="number" name="number" placeholder="XXXX-XXX-XXX" value="{{data[0]}}" style="display: none;">
+                <input type="text" id="numberotp" name="numberotp" placeholder="XXX-XXX">
+                
+            </div>
+            <div class="submit">
+                <button>Submit</button>
+            </div>
+        </form>
+    </div>
+    
+
+
+{%endblock%}

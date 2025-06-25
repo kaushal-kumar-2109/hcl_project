@@ -1,0 +1,19 @@
+{%extends "comman.html"%}
+{%block body%}
+
+    <div class="registerform" style="height: 500px;">
+        <form action="http://127.0.0.1:5000/forget" method="post">
+            <div class="part" id="form">
+
+                <label for="email" >Email<a style="color: red;">*</a> </label>
+                <input type="email" id="email" name="email" placeholder="abc@gmail.com">
+
+            </div>
+            <div class="submit">
+                <button>Submit</button>
+            </div>
+        </form>
+        
+    </div>
+ 
+{%endblock%}

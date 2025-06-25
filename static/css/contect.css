@@ -1,0 +1,84 @@
+.feedbackcon{
+    height: 100%;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding:4rem;
+}
+.feedbackcon form{
+    height: 100%;
+    width: 60%;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.feedbackcon form label{
+    width: 90%;
+    margin: 2rem;
+    font-weight: bold;
+    font-size: larger;
+}
+.feedbackcon form input{
+    width: 90%;
+    border: 0;
+    border-bottom: 2px solid gray;
+    padding: 0 1rem;
+}
+.feedbackcon form textarea{
+    width: 90%;
+    height: 10rem;
+    padding: 0.5rem 1rem;
+}
+.feedbackcon form button{
+    margin: 2rem;
+    width: 50%;   
+}
+
+#flash{
+    position: fixed;
+    color: rgba(51, 49, 49, 0.644);
+    margin-top: -35rem;
+    background-color: rgba(102, 255, 0, 0.493);
+    padding: 1rem 3rem;
+    border-radius: 20px;
+    display: none;
+}
+
+
+
+/*    user.login page css */
+
+h3 a{
+    font-size:40px;
+    color: rgba(77, 77, 210, 0.558);
+}
+h3 a:hover{
+    font-size:41px;
+    color: rgba(5, 5, 244, 0.895);
+}
+
+.register{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.register .part{
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.Login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}

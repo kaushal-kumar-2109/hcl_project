@@ -1,0 +1,11 @@
+{
+  "name": "hclproject",
+  "version": "1.0.0",
+  "main": "main.py",
+  "scripts": {
+    "test": "python main.py"
+  },
+  "author": "kishore",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,242 @@
+{%extends "comman.html"%}
+{%block body%}
+
+<div class="checkout_body">
+    <div class="main_box">
+        <a ><button class="btn">SHOPPING CART</button></a>
+        <i class="fas fa-arrow-right"></i> 
+        <a href=""><button class="btn">CHECKOUT DETAILS</button></a>
+        <i class="fas fa-arrow-right"></i> 
+        <a href=""><button class="btn"><i class="fas fa-check-circle"></i> ORDER COMPLETE</button></a>
+    </div>
+</div>
+
+<div class="details_form"> 
+
+    <form id="addressform">
+        
+
+        <div class="container" id="addiv">
+            <H2 style="width: 100%; display: flex; justify-content: center; font-size:3rem;">Select Delevery Date :</H2>
+            <div class="adddate" style="width: 100%; height:auto; margin:2rem;">
+                <select for="delevry" name="delevry" class="addresses" style="padding: 1rem;" id="delevry">
+                    <option id="delevry" value="{{days[8]}}">{{days[8]}} Next Week</option>
+                    <option id="delevry" value="{{days[7]}}">{{days[7]}}</option>
+                    <option id="delevry" value="{{days[6]}}">{{days[6]}}</option>
+                    <option id="delevry" value="{{days[5]}}">{{days[5]}}</option>
+                    <option id="delevry" value="{{days[4]}}">{{days[4]}}</option>
+                    <option id="delevry" value="{{days[3]}}">{{days[3]}}</option>
+                    <option id="delevry" value="{{days[2]}}">{{days[2]}}</option>
+                    <option id="delevry" value="{{days[1]}}">{{days[1]}} Tomorrow</option>
+                </select>
+            </div>
+
+            <h2 style="width: 100%; display: flex; justify-content: center; font-size:3rem;">Select An address :</h2>
+{%for add in ad:%}
+<a href="http://127.0.0.1:5000/{{add[1]}}/{{total}}/addadress">
+            <div class="addresses" id="{{add[1]}}">
+                <p id="{{add[1]}}" style="display: none;"></p>
+                <h4 style="width: 100%; display:flex; justify-content:center;padding:4px 0px;">{{add[4]}} {{add[5]}}</h4>
+                <h5 style="margin-top: 4px;">{{add[6]}},{{add[7]}},{{add[8]}},{{add[9]}}</h5>
+                <h5 style="margin-top: 4px;">{{add[11]}}-{{add[10]}}</h5>
+                <h6 style="margin-top: 4px;">{{add[3]}}</h6>
+            </div>
+</a>
+{%endfor%}
+
+            <h2 style="width: 100%; display: flex; justify-content: center; font-size:1.5rem;">
+                Add new address &nbsp; 
+                <k style="color: blue; cursor:pointer;" id="showAddAddress">
+                    Add +
+                </k>
+            </h2>
+
+        </div>
+    </form>
+
+    <form action="http://127.0.0.1:5000/add/new/address" method="post" id="addaddressform">
+    <div class="container">
+
+        <h2 style="width: 100%; display: flex; justify-content: center; font-size:3rem;">Customer Information</h2>
+        <div class="form-group">
+            <label for="number">Phone Number*</label>
+            <input type="text" id="number" name="number" value="+91" required>
+        </div>
+    
+        <div class="form-group" style="flex-wrap: nowrap; justify-content: space-between;">
+            <div class="subpart" style="width: 50%; margin-right: 0.5rem;">
+                <label for="first-name">First Name *</label>
+                <input type="text" id="first-name" name="first-name"required>
+            </div>
+            <div class="subpart" style="width: 50%; margin-left: 0.5rem;">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" value=" ">
+            </div>
+            
+            
+        </div>
+    
+    
+        <div class="form-group">
+            <label for="company">Company Name (Optional)</label>
+            <input type="text" id="company" name="company" value=" ">
+        </div>
+    
+        <div class="form-group">
+            <label for="address">House Number and Street Name *</label>
+            <input type="text" id="address" name="house_street" required class="error">
+        </div>
+    
+        <div class="form-group">
+            <label for="apartment">Apartment, Suite, Unit (Optional)</label>
+            <input type="text" id="apartment" name="apartment" value=" ">
+        </div>
+    
+        <div class="form-group">
+            <label for="city">Town / City *</label>
+            <input type="text" id="city" name="city" required>
+        </div>
+    
+        <div class="form-group">
+            <div class="subpart" style="flex-wrap: nowrap; justify-content: space-between; margin-right: rem;">
+                <label for="zip">ZIP Code *</label>
+                <input type="text" id="zip" name="zip" required class="error">
+            </div>
+
+            <div class="subpart" style="flex-wrap: nowrap; justify-content: space-between; margin-left: 0.5rem; height: 42px;width:25%;">
+            <label for="state">State</label>
+            <select id="state" name="state" style="height: 100%;width: 100%;">
+                <option value="Delhi">Delhi</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Haryana">Haryana</option>
+            </select>
+        </div>
+
+
+        </div>
+    
+        <h2>Additional Information</h2>
+        <div class="form-group">
+            <label for="notes" >Notes about your order (Optional)</label>
+            <textarea id="notes" name="notes" > </textarea>
+        </div>
+    
+        <h2>Payment</h2>
+        <div class="payment-warning">
+           <p>Sorry, it seems that there are no available payment methods. Please contact us if you require assistance or wish to make alternate arrangements. <b>ONLY CASH ON DELIVERY AVAILABLE.</b>
+            </p>
+        </div>
+        <button class="submit-btn">Add Address</button>
+    </div>
+</form>
+
+
+    <div class="product_details">
+            <div class="headding">
+                <div class="head">
+                    <h4 style="font-size: 45px;">Product</h4>
+                </div>
+                <div class="head">
+                    <h4 style="font-size: 45px;">Price</h4>
+                </div>
+            </div>
+
+            <div class="product_list">
+
+{%for i in range(len):%}
+                <div class="productCard">
+                    <div class="head2">
+                        <img src="{{fdata[i][0]}}" alt="jacket">
+                        
+                    </div>
+                    <div class="head2">
+                        <H5>{{pdata[i][3]}}</H5>
+                    </div>
+    
+                    <div class="head2">
+                        <h5>&#x20b9; &nbsp; {{fdata[i][1]*pdata[i][3]}}</h5>
+                    </div>
+                </div>
+{%endfor%}
+
+            
+            </div>
+
+            <div class="checkout_price" style="border-top: 2px solid black; height:4rem;">
+                <div class="subtotal">
+                    <h4>Discount :</h4> 
+                </div>
+                
+                <div class="subtotal">
+                    <h4>10%</h4>
+                </div>
+
+            </div>
+
+            <div class="price" style="height:4rem;">
+                <div class="Total">
+                    <h4>Total</h4> 
+                </div>
+                
+                <div class="Total">
+                    <h4>&#x20b9; &nbsp; 
+                        {{total}}</h4>
+                </div>
+
+            </div>
+
+            <div class="price" style="height:4rem;">
+                <div class="Total">
+                    <h4>Selected Date :</h4> 
+                </div>
+                
+                <div class="Total" id="showdate">
+                    <h4>
+                        After 1 Week</h4>
+                </div>
+
+            </div>
+
+            <div class="placeorder" id="placeOrder"
+            style="height: 5rem; width:100%">
+{%if (addid):%}
+<form action="http://127.0.0.1:5000/{{addid}}/orderplaced" method="post" style="display:flex;height: 100%; width:100%; align-items: center;justify-content: center;">
+                
+    <div id="delevery" style="display: none;">
+        <input type="text" name="delevery" value="7">
+    </div>
+            <button style="height: 3rem; width:70%;">Place Order</button>
+               
+</form>
+{%endif%}
+{%if(not addid):%}
+                <a href="#" id="placeorder" style="height: 100%; width:100%; align-items: center;justify-content: center;">
+                    <button style="height: 3rem; width:70%;" disabled>Place Order</button>
+                </a>
+{%endif%}
+            </div>
+
+     </div>
+</div>
+
+
+<script>
+    document.getElementById('showAddAddress').addEventListener("click",()=>{
+        document.getElementById('addaddressform').style.display='flex';
+        document.getElementById('addressform').style.display='none';
+    });
+
+
+    document.getElementById('delevry').addEventListener('change',(event)=>{
+        document.getElementById('delevery').innerHTML=`
+        <input type="text" name="delevery" value="${event.target.value}">
+`;
+        document.getElementById('showdate').innerHTML=`
+        <h4>On ${event.target.value} </h4>
+`;
+    });
+
+
+</script>
+
+{%endblock%}

@@ -1,0 +1,55 @@
+{%extends "comman.html"%}
+{%block body%}
+
+<style>
+    .register,.login{
+        width: 100%;
+        height: 3rem;
+        display: flex;
+    }
+    .register h3,.login h3{
+        color: black;
+        width: 100%;
+        height: 3rem;
+        display: flex;
+    }
+    .register h3 a,.login h3 a{
+        margin-left: 1rem;
+        width:20%;
+    }
+
+</style>
+    
+    <div class="rule-sig-log">
+        <div class="ruleset">
+            <hr>
+            <div class="rulecard">
+                <p>The Plateform cannot and does not guarantee that the vender and customers will perform any transaction concluded on the plateform and is not required to mediate or resolve any disputes or disagrements between the Vender and Customer</p>
+            </div>
+            <hr>
+            <div class="rulecard">
+                <p>It is your responsibility to keep Youraccount information up to date and private. you agree to promptly update all account information to keep it accurate, current and co,plete. Any change that may materially impact your transection on the platform shuld be immediately notified to us.</p>
+            </div>
+            <hr>
+            <div class="rulecard">
+                <p>If you are a minor that is under the age of 18 years, You shall not register as a Vender on the Plateform, engage in trandaction, or use the plateform.</p>
+            </div>
+            <hr>
+            <div class="rulecard">
+                <p>If you registering as a bussiness entity. You affrin that you been duly authorize by the business entity to accept and enter into this Agreement and that you have the authority to bind the business entity to these terms.</p>
+            </div>
+            <hr>
+            <div class="rulecard">
+                <p>Use this plateform at your own risk. This plateform is still under construction any misslanious thing can not handle by the plateform.</p>
+            </div>
+            <hr>
+            <div class="register" style="width: 100%; margin-right:2rem;">
+                <h3 style="color: black;">Create a New Account :&nbsp; <a href="http://127.0.0.1:5000/user/priregister">&nbsp;Register&nbsp;</a></h3>
+            </div>
+        </div>
+        <div class="login">
+            <h3 style="color: black;">Have An Account : &nbsp; <a href="http://127.0.0.1:5000/user/login">&nbsp;Log In&nbsp;</a></h3>
+        </div>
+    </div>
+    
+{%endblock%}

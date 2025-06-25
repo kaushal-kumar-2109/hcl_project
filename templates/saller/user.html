@@ -1,0 +1,78 @@
+
+{%extends "comman.html"%}
+{%block body%}
+
+    
+
+    <div class="userarea">
+        <div class="comapnytitle">
+            <h1>{{data[0][3].upper()}} </h1>
+        </div>
+
+        <div class="userbio">
+            <div class="profilepic">
+                <img src="{{url_for('static', filename='/image/user.png')}}" alt="User Profile Picture">
+            </div>
+            <div class="bio">
+                <h4>Name : </h4><a>{{data[0][1].upper()}} {{data[0][2].upper()}}</a>
+                <h4>Email : </h4><a>{{data[0][5]}}</a>
+                <h4>Phone No. : </h4><a>{{data[0][4]}}</a>
+            </div>
+        </div>
+
+        <div class="accountdata"></div>
+
+        <div class="earning">
+            <h5>Total Earning : $ {{data[0][7]}}</h5>
+        </div>
+
+        <div class="products">
+
+            
+            <div class="fullcard">
+                <div class="image">
+                    <img src="{{url_for('static', filename='/image/add.png')}}">
+                </div>
+                <div class="function" id="datashow">
+                    <a href="http://127.0.0.1:5000/product/{{data[0][0]}}" style="width: 100%;"><button style="width: 100%;">ADD</button></a>
+                </div>
+                
+            </div>
+
+            {% for i in range(length):%}
+                <div class="fullcard">
+                    <div class="image">
+                        <img src="{{pdata[i][7]}}">
+                    </div>
+                    <!-- <div class="function" id="datashow">
+                     <h5>Show: <input id="show" type="checkbox"></h5>
+                    </div> -->
+
+                    <label for="show" id="show">Show :</label>&nbsp;<input name="show" id="show" type="checkbox">
+                    <div class="product_data" id="product_data">
+                        <div class="pdata">
+                            <h5>Name : {{pdata[i][2]}} </h5>
+                            <h5>Price : $ {{pdata[i][3]}}</h5>
+                            <h5>Category : {{pdata[i][4]}}</h5>
+                            <h5>Discount : {{pdata[i][5]}} %</h5>
+                            <h5>Quantity : {{pdata[i][6]}} Pack</h5>
+                            <h5>Company : {{pdata[i][10]}} </h5>
+                        </div>
+                        <div class="option">
+                            <a href="http://127.0.0.1:5000/{{pdata[i][1]}}/{{pdata[i][0]}}"><button>Edit</button></a>
+                            <a href="http://127.0.0.1:5000/del/product/{{pdata[i][0]}}"><button>Delete</button></a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+
+
+        </div>
+
+        
+
+    </div>
+    
+
+{%endblock%}

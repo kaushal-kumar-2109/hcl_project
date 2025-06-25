@@ -1,0 +1,266 @@
+.checkout_body{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+.main_box{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 4rem 4rem;
+}
+.main_box a{
+    width: 25%;
+}
+
+.main_box a button{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    cursor: pointer;
+    box-shadow: none;
+}
+.main_box i{
+    width: 5%;
+}
+
+
+.btn {
+    width: 276px;
+    height: 70px;
+    padding: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+}
+
+/* invoice page starts from here. */
+
+.order_complete{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    padding:15px ;
+    border-top: 2px solid black;
+}
+
+.order_complete .orderpage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: blueviolet; */
+    width: 35%;
+    height: 950px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.order_complete .orderpage .box1{
+        display: flex;
+        justify-content: center;
+        border: 1px solid black;
+        width: 100%;
+        height: 91px;
+        align-items: center;
+
+}
+
+.order_complete .orderpage .box2{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 322px;
+    border: 1px solid black;
+}
+
+.order_complete .orderpage .box2 .purchase{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    height: auto;
+    
+}
+
+.order_complete .orderpage .box2 .estimate{
+    display: block;
+    align-self: center;
+    width: 50%;
+    padding: 20px;
+    height: 100%;
+    border-left: 2px solid black;
+}
+
+.order_complete .orderpage .box3{
+    display: block;
+    justify-content: center;
+    border: 1px solid black;
+    width: 100%;
+    height: 476px;
+
+}
+
+.order_complete .orderpage .box3 .invoice{
+    display: block;
+    justify-content: space-evenly;
+    height: 500px;
+    width: 100%;
+    flex-wrap: wrap;
+    /* background-color: pink; */
+    padding: 10px;
+
+}
+
+
+/* pooint1 */
+
+.order_complete .orderpage .box3 .invoice .point1{
+    display: flex;
+    justify-content: space-between;
+    height: 74px;
+    width: 95%;
+    border-bottom: 2px solid black;
+    
+}
+
+.order_complete .orderpage .box3 .invoice .point1 .obj1{
+    display: flex;
+    justify-content: flex-start;
+    height: auto;
+    width: 35%;
+    align-items: center;
+}
+
+/* point2 */
+.order_complete .orderpage .box3 .invoice .point2{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    width: 95%;
+    border-bottom: 2px solid black;
+    
+}
+
+.order_complete .orderpage .box3 .invoice .point2 .obj2{
+    display: flex;
+    justify-content: flex-start;
+    height: auto;
+    width: 31%;
+    align-items: center;
+}
+
+/* point3 */
+.order_complete .orderpage .box3 .invoice .point3{
+    display: flex;
+    justify-content: space-between;
+    height: 67px;
+    width: 95%;
+    border-bottom: 2px solid black;
+    
+}
+
+.order_complete .orderpage .box3 .invoice .point3 .obj3{
+    display: flex;
+    justify-content: flex-start;
+    height: auto;
+    width: 31%;
+    align-items: center;
+}
+
+/* point4 */
+.order_complete .orderpage .box3 .invoice .point4{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    width: 95%;
+    border-bottom: 2px solid black;
+    
+}
+
+.order_complete .orderpage .box3 .invoice .point4 .obj4{
+    display: flex;
+    justify-content: flex-start;
+    height: auto;
+    width: 31%;
+    align-items: center;
+}
+/* point 5 */
+.order_complete .orderpage .box3 .invoice .point5{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    width: 95%;
+    
+    
+}
+
+.order_complete .orderpage .box3 .invoice .point5 .obj5{
+    display: flex;
+    justify-content: flex-start;
+    height: 80px;
+    width: 31%;
+    align-items: center;
+    
+}
+
+/* download button invoice */
+
+/* .order_complete .download-btn {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.download-btn:hover {
+    background-color: #45a049;
+} */
+
+.order_complete .orderpage .invoice_download{
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    width: 100%;
+    height: 49px;
+    
+}
+
+.order_complete .orderpage .invoice_download .inovice_card .download-btn h7{
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    align-items: center;
+    width: 60%;
+    height: auto;
+    margin: 8px;
+    
+}
+
+
+.order_complete .orderpage .invoice_download  .invoice_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 46px;
+    cursor: pointer;    
+    }
+
+
+
+
+

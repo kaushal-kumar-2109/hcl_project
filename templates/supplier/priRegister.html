@@ -1,0 +1,34 @@
+{%extends "comman.html"%}
+{%block body%}
+
+
+<style>
+    label{
+        display: flex;
+    }
+    label a{
+        color:red;
+        width: 1rem;
+    }
+</style>
+
+    <div class="priregisterform">
+        <form action="http://127.0.0.1:5000/user/register" method="post">
+            <div class="part">
+                <label for="number" id="number">Phone No.<a>*</a> : </label>
+                <input type="text" id="number" name="number" placeholder="xxxx-xxx-xxx" value="+91" required>
+                
+                
+                <label for="email" id="email">Email<a>*</a> : </label>
+                <input type="email" id="email" name="email" placeholder="abc@gmail.com" required>
+            </div>
+            <div class="submit">
+                <button>Submit</button>
+            </div>
+        </form>
+    </div>
+    
+
+
+
+{%endblock%}

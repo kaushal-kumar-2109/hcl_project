@@ -1,0 +1,110 @@
+{%extends "comman.html"%}
+{%block body%}
+
+<style>
+  label{
+      display: flex;
+      width: 100%;
+  }
+  label a{
+      color:red;
+      width: 1rem;
+  }
+  .part{
+    width: 100%;
+  }
+</style>
+
+  <div class="feedbackcon">
+
+    {%if (flag==1):%}
+    <form action="http://127.0.0.1:5000/loginuser/userpage" method="POST">
+        <div class="part">
+
+            <label for="email">Email<a style="color: red;">*</a> :</label>
+            <input type="email" placeholder="abc@gmail.com" name="email" id="email">
+
+            <label for="password">Password<a style="color: red;">*</a> :</label>
+            <input type="password" placeholder="***********" name="password" id="password">
+
+        </div>
+        <button type="submit">Submit</button>
+
+        <br><br><br><hr>
+
+        <h3><a href="http://127.0.0.1:5000/forget" style='margin-left:1rem'>Forgot Password</a></h3>
+    </form>
+    
+
+
+    <h3>Don't Have Account : <a href="http://127.0.0.1:5000/2/user">SignUp</a></h3>
+    {%endif%}
+
+    {%if(flag==2):%}
+    <form action="http://127.0.0.1:5000/addUSER" method="POST">
+        <div class="part">
+
+            <label for="email">Email<a style="color: red;">*</a> :</label>
+            <input type="email" placeholder="abc@gmail.com" name="email" id="email">
+
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>Have Account : <a href="http://127.0.0.1:5000/1/user">Login.</a></h3>
+    {%endif%}
+
+    {%if(flag==3):%}
+    <form class="register" action="http://127.0.0.1:5000/addUSER" method="POST">
+        <div class="part">
+
+          <label for="username">Username<a style="color: red;">*</a> :</label>
+          <input id="username" name="username" type="text" placeholder="@abc" required>
+
+          <label for="number">Phonenumber</label>
+          <input id="number" name="number" type="text" placeholder="XXXX-XXX-XXX" required value="+91">
+
+          <label for="otp">Email OTP<a style="color: red;">*</a> :</label>
+          <input name="otp" id="otp" type="number" required placeholder="XXX-XXX" required>
+
+          <label for="city">City<a style="color: red;">*</a> :</label>
+          <select id="city" name="city">
+            <option value="Delhi">Delhi</option>
+            <option value="Noida">Noida</option>
+            <option value="Greater-Noida">Greater-Noida</option>
+          </select>
+        </div>
+        <div class="part">  
+          
+          <label for="gender">Gender<a style="color: red;">*</a> :</label>
+          <input name="gender" id="gender" type="text" placeholder="(M, F, O ) Any One">
+
+          <label for="pincode">Pincode<a style="color: red;">*</a> :</label>
+          <input name="pincode" id="pincode" type="text" placeholder="XXXXXX" required>
+
+          <label for="age">Age<a style="color: red;">*</a> :</label>
+          <input name="age" id="age" type="number" placeholder="XX" required>
+
+          <label for="password">Password<a style="color: red;">*</a> :</label>
+          <input name="password" id="password" type="password" placeholder="*********" required>
+
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3 class="Login">Have Account : <a href="http://127.0.0.1:5000/1/user">Login.</a></h3>
+    {%endif%}
+
+
+  </div>
+
+
+  <script>
+    const flash=document.getElementById('flash');
+    flash.style.display='flex';
+    setTimeout((event) => {
+        flash.style.display='none';
+    }, 2000);
+  </script>
+ 
+{%endblock%}

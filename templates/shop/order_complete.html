@@ -1,0 +1,60 @@
+{%extends "comman.html"%}
+{%block body%}
+
+<style>
+    .invocerbody{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: white;
+        padding: 1rem;
+    }
+    .invocerbody .invoiceheader{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        margin-top: 4rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .invocerbody .hinvoiceheader h4{
+        font-family: Brush Script MT;
+        font-size: 2rem;
+    }
+    .invocerbody .imagedelivery{
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .invocerbody .downloadinvoice{
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    .invocerbody .downloadinvoice a{
+        color: blue;
+        font-size: 2rem;
+    }
+</style>
+
+<div class="invocerbody">
+    <div class="invoiceheader">
+        <h2><b>Order Placed Successfully</b></h2>
+    </div>
+    <div class="imagedelivery">
+        <video src="/static/image/delivery.webm" loop muted autoplay></video>
+    </div>
+    <div class="downloadinvoice">
+        <a href="http://127.0.0.1:5000/send/invoice">Get Invoice By Email</a>
+    </div>
+</div>
+
+{%endblock%}

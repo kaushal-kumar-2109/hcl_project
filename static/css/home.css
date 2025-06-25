@@ -1,0 +1,375 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Pinyon+Script&display=swap');
+
+
+.pri_products{
+    height: auto;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+svg{
+    height: 13px;
+    margin-bottom: 0.2rem;
+}
+p svg{
+    height: 20px;
+    margin-bottom: 0.2rem;
+}
+.ratting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#top{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+.nav-con h1{
+    font-size: 30px;
+    text-align: center;
+    margin:30px;
+    align-items: center;
+}
+
+.parent-box {
+    display: flex; /* Enables side-by-side layout */
+    align-items: center; /* Aligns items vertically */
+    width: 100%;
+    margin: 20px auto; /* Centers the box */
+    padding: 10px;
+    background-color: #f9f9f9; /* Light background */
+    height: 500px;
+}
+
+/* Description Box */
+.description {
+    width: 60%; /* Takes 60% of space */
+    padding: 10px;
+}
+
+.description h2{
+    font-size: 60px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.description h1{
+    font-size: 35px;
+}
+.buy_button {
+    background-color: #28a745; /* Green color */
+    color: white; /* Text color */
+    font-size: 32px; /* Bigger font size */
+    font-family: cursive;
+    text-align: left;
+    padding: 15px 15px; /* Bigger padding */
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 200px; /* Increase width */
+    height: 62px; /* Increase height */
+    display: flex; /* Ensures block-level alignment */
+    justify-content: center;
+    align-items: center;
+
+}
+
+.buy_button:hover {
+    background-color: #308342; /* Darker green on hover */
+}
+
+.image {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100%; /* Adjust as needed */
+    width: 380px;
+
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.image img {
+
+    padding: 10px;
+    width: 352px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.Quote1{
+    background-color: #f9f9f9;
+    text-align: center;
+    
+}
+.Quote1 h2{
+    font-size: 60px;
+    text-align: center;
+    font-family: "Pinyon Script", serif;
+    font-weight: 550;
+}
+
+.overall_box{
+    background-color:white;
+    display: flex; 
+    flex-direction: column;  
+    align-items: center;  
+    width: 100%;  
+    padding: 20px 0;  
+}
+
+/* Container for all products */
+.product-container {
+    padding: 4rem 2rem;
+    width: 100%;
+    margin-top: 1rem;
+    align-items: center;
+    overflow:hidden;
+    display: flex;   /* Enables side-by-side layout */
+    justify-content:space-evenly;  /* Centers the products */
+    gap: 20px;   /* Adds space between products */
+    flex-wrap:nowrap;  /* Wraps products to new row if screen is small */
+}
+
+/* Individual product box */
+.product-box {
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    max-width: 250px;
+    min-width: 250px;
+    width: 250px;  /* Controls the width */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Product image */
+.product-box img {
+    width: 100%;  /* Makes image fill container */
+    height: 13rem;  /* Maintains aspect ratio */
+    border-radius: 8px;
+}
+
+/* Product name */
+.product-box h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* Product price */
+.product-box h3 {
+    font-size: 18px;
+    color: #28a745;
+}
+
+/* Buy button */
+#topbut{
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+a{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.buy-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buy-button:hover {
+    background-color: #218838;
+}
+
+.Quote2{
+
+    margin-top: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+    
+}
+
+.Quote2 h1{
+    font-family: "Pinyon Script", serif;
+    font-weight: 400;
+    font-size: 100px;
+    color: #218838;
+}
+
+.illustration{
+    padding: 20px;
+    display:flex ;
+    justify-content: center;
+    width: 500px;
+
+
+}
+
+.illustration img{
+    padding: 10px;
+    width: 1000px;
+    height: 500px;
+    border-radius: 25px
+}
+
+
+.daily_needs{
+    padding:40px;
+    display: block;
+    justify-content: center;
+}
+
+.daily_needs h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+.daily_needs p{
+    text-align: center;
+    font-size: 30px;
+}
+
+.container {
+    width: 80%;
+    margin: 52px;
+    text-align: center;
+    background-color: beige;
+    border-radius: 15px;
+}
+
+.our-story {
+    background: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 35px;
+}
+.our-story h2 {
+    font-size: 36px;
+    color: rgb(18, 81, 18);
+}
+.our-story p {
+    font-size: 18px;
+    color: rgb(18, 81, 18);
+    line-height: 1.6;
+}
+
+.customer-review {
+    width: 80%;
+    margin: 52px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.customer-review h1{
+    font-size: 45px;
+    font-family: "Pinyon Script", serif;
+    font-weight: 600;
+}
+
+
+
+.profile-product-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.profile-section {
+    text-align: center;
+    width: 40%;
+}
+.profile-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: #666;
+    margin: 0 auto 10px;
+}
+.review {
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
+}
+.product-section {
+    width: 50%;
+    display: flex;
+    gap: 10px;
+}
+.product-section img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+/* scroller css */
+.scroller{
+    width: 100%;
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+}
+.scroller .left{
+    transform: rotate(180deg);
+}
+.scroller .left,.right{
+    margin: 0rem 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(128, 128, 128, 0.311);
+    width: 2rem;
+    background-color: rgba(135, 133, 133, 0.073);
+    border-radius: 50%;
+}
+.scroller .left svg,.right svg{
+    height: 80%;
+}
+.scroller p{
+
+    margin: 5px 1rem 0rem 1rem;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}

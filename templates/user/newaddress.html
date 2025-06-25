@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="fabicon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/maincss.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/user.css')}}">
+    <title>{{name}}</title>
+    
+    <link rel="icon" href="{{url_for('static',filename='image/companyicon.png')}}"type="image/x-icon" />
+</head>
+<style>
+  label{
+      display: flex;
+      width: 100%;
+  }
+  label a{
+      color:red;
+      width: 1rem;
+  }
+  .part{
+    width: 100%;
+  }
+</style>
+<body>
+  <div class="imagediv">
+    <video src="{{url_for('static', filename='image/shopping.mp4')}}" autoplay muted loop></video>
+  </div>
+  <div class="Con-Body">
+    <div class="brand-title brand1">
+      <a class="navbar-brand" id="brand" style="color: white;" href="#">Daily.Shop</a>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid ">
+          <a class="navbar-brand brand" id="brand" style="color: white;" href="#">Daily.Shop</a>
+          <button style="color: white; border-color: white;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" style="color: white;" href="http://127.0.0.1:5000/home">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="#000000" d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/>
+                </svg> -->
+                HOME
+              </a>
+              <a class="nav-link active" style="color: white;" href="http://127.0.0.1:5000/shop">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                    <path fill="#000000" d="M36.8 192l566.3 0c20.3 0 36.8-16.5 36.8-36.8c0-7.3-2.2-14.4-6.2-20.4L558.2 21.4C549.3 8 534.4 0 518.3 0L121.7 0c-16 0-31 8-39.9 21.4L6.2 134.7c-4 6.1-6.2 13.2-6.2 20.4C0 175.5 16.5 192 36.8 192zM64 224l0 160 0 80c0 26.5 21.5 48 48 48l224 0c26.5 0 48-21.5 48-48l0-80 0-160-64 0 0 160-192 0 0-160-64 0zm448 0l0 256c0 17.7 14.3 32 32 32s32-14.3 32-32l0-256-64 0z"/>
+                </svg> -->
+                SHOP</a>
+              <a class="nav-link active" style="color: white;" href="http://127.0.0.1:5000/supplier">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                    <path fill="#000000" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c10 0 18.8-4.9 24.2-12.5l-99.2-99.2c-14.9-14.9-23.3-35.1-23.3-56.1l0-33c-15.9-4.7-32.8-7.2-50.3-7.2l-91.4 0zM384 224c-17.7 0-32 14.3-32 32l0 82.7c0 17 6.7 33.3 18.7 45.3L478.1 491.3c18.7 18.7 49.1 18.7 67.9 0l73.4-73.4c18.7-18.7 18.7-49.1 0-67.9L512 242.7c-12-12-28.3-18.7-45.3-18.7L384 224zm24 80a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/>
+                </svg> -->
+                SUPPLIER</a>
+              <a class="nav-link active" style="color: white;" href="http://127.0.0.1:5000/contect">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                    <path fill="#000000" d="M208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 38.6 14.7 74.3 39.6 103.4c-3.5 9.4-8.7 17.7-14.2 24.7c-4.8 6.2-9.7 11-13.3 14.3c-1.8 1.6-3.3 2.9-4.3 3.7c-.5 .4-.9 .7-1.1 .8l-.2 .2s0 0 0 0s0 0 0 0C1 327.2-1.4 334.4 .8 340.9S9.1 352 16 352c21.8 0 43.8-5.6 62.1-12.5c9.2-3.5 17.8-7.4 25.2-11.4C134.1 343.3 169.8 352 208 352zM448 176c0 112.3-99.1 196.9-216.5 207C255.8 457.4 336.4 512 432 512c38.2 0 73.9-8.7 104.7-23.9c7.5 4 16 7.9 25.2 11.4c18.3 6.9 40.3 12.5 62.1 12.5c6.9 0 13.1-4.5 15.2-11.1c2.1-6.6-.2-13.8-5.8-17.9c0 0 0 0 0 0s0 0 0 0l-.2-.2c-.2-.2-.6-.4-1.1-.8c-1-.8-2.5-2-4.3-3.7c-3.6-3.3-8.5-8.1-13.3-14.3c-5.5-7-10.7-15.4-14.2-24.7c24.9-29 39.6-64.7 39.6-103.4c0-92.8-84.9-168.9-192.6-175.5c.4 5.1 .6 10.3 .6 15.5z"/>
+                </svg> -->
+                FEEDBACK</a>
+              <a class="nav-link active" style="color: white;" href="http://127.0.0.1:5000/{{defid}}/user">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path fill="#000000" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/>
+                </svg> -->
+                USER</a>
+                <a class="nav-link active" style="color: white;" href="http://127.0.0.1:5000/cart">
+                  <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                      <path fill="#000000" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/>
+                  </svg> -->
+                CART &nbsp; <div class="value">{{topro}}</div></a>
+            </div>
+          </div>
+        </div>
+    </nav>
+  </div>
+{%if(m==1)%}
+  <div class="addressform">
+    <h1 class="Quote2">Add New Address</h1>
+
+    <form action="http://127.0.0.1:5000/1/{{id}}/addnew/address" method="post" class="row g-3 needs-validation" novalidate>
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Full Name<a style="color: red;">*</a> :</label>
+          <input type="text" class="form-control" id="validationCustom01" name="validationCustom01" placeholder="Enter Your Full Name" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Phone Number</label>
+          <input type="text" class="form-control" name="number" id="validationCustom02" value="+91" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label">Full Address</label>
+          <div class="input-group has-validation">
+            <input type="text" class="form-control" name="address" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              Please Provide A Valid Address.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">City</label>
+          <input type="text" class="form-control" name="city" id="validationCustom03" required>
+          <div class="invalid-feedback">
+            Please Provide A Valid City.
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">Type</label>
+          <select class="form-select" name="type" id="validationCustom04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>Home</option>
+            <option>Work</option>
+            <option>Office</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid state.
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label">Zip</label>
+          <input type="text" name="zip" class="form-control" id="validationCustom05" required>
+          <div class="invalid-feedback">
+            Please provide a valid zip.
+          </div>
+        </div>
+
+        <div class="button col-20">
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+      </form>
+  </div>
+{%endif%}
+
+{%if(m==2)%}
+  <div class="addressform">
+
+    <form action="http://127.0.0.1:5000/{{data[1]}}/{{id}}/addnew/address" method="post" class="row g-3 needs-validation" novalidate>
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="validationCustom01" name="validationCustom01" value="{{data[3]}}" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Phone Number</label>
+          <input type="text" class="form-control" name="number" id="validationCustom02" value="{{data[4]}}" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label">Full Address</label>
+          <div class="input-group has-validation">
+            <input type="text" class="form-control" name="address" value="{{data[7]}}" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              Please Provide A Valid Address.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">City</label>
+          <input type="text" class="form-control" name="city" id="validationCustom03" value="{{data[5]}}" required>
+          <div class="invalid-feedback">
+            Please Provide A Valid City.
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">Type</label>
+          <select class="form-select" name="type" id="validationCustom04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>Home</option>
+            <option>Work</option>
+            <option>Office</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid state.
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label">Zip</label>
+          <input type="text" name="zip" class="form-control" id="validationCustom05" value="{{data[6]}}" required>
+          <div class="invalid-feedback">
+            Please provide a valid zip.
+          </div>
+        </div>
+
+        <div class="button col-20">
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+      </form>
+  </div>
+{%endif%}
+
+      <footer>
+        <div class="footd">
+            <div class="part">
+                <h4>Contact Details</h4>
+                <h4>xxxx-xxx-xxx</h4>
+                <h4>Contact@info.com</h4>
+                <h4>Kccitm Greater Noida Knowlage Park-2</h4>
+            </div>
+            <div class="part1">
+                <a class="navbar-brand" id="brand" style="color: white;" href="#" >Daily.Shop</a>
+            </div>
+            <div class="part">
+                <h4>Quick Links</h4>
+                <h4>Shipping & Returns</h4>
+                <h4>Contact</h4>
+                <h4>Customer Service</h4>
+            </div>
+        </div>
+        <div class="socialmedia">
+            <i class="fa-brands fa-square-instagram" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+        
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+  
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+</script>
+</html>
+
+

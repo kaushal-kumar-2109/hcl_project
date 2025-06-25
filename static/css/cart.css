@@ -1,0 +1,226 @@
+.cartbody{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+.main_box{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 4rem 4rem;
+}
+.main_box a{
+    width: 25%;
+}
+
+.main_box a button{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    cursor: pointer;
+    box-shadow: none;
+}
+.main_box i{
+    width: 5%;
+}
+
+
+.btn {
+    width: 276px;
+    height: 70px;
+    padding: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+}
+
+.cart_box {
+    border: 1px solid rgba(199, 198, 198, 0.836);
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 2rem 2rem;
+}
+.cart_box .leftpart{
+    width: 55%;
+    height: auto;
+    background-color: white;
+    flex-wrap: wrap;
+    box-shadow: 1px 1px 10px gray;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2px;
+    padding: 1rem;
+    border: 2px solid rgba(142, 140, 140, 0.616);
+    border-radius: 10px;
+}
+.cart_box .leftpart .leftcard{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.cart_box .leftpart .photo{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.cart_box .leftpart .photo img{
+    width: auto;
+    height: auto;
+    
+}
+
+
+
+
+.product_quantity {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: start;
+    background-color: white;
+    align-items: center;
+    width: auto;
+    flex-wrap: wrap;
+    padding: 5px;
+
+}
+.product_quantity button {
+    width: 40px;
+    margin: 3px;
+    border: none;
+    background: none; 
+    font-size: 25px;
+    font-weight: bold; 
+    cursor: pointer; 
+    box-shadow: none;
+}
+
+
+.product_quantity input {
+    width: 50px;
+    font-size: 22px;
+    height: auto;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.cart_box .leftpart .money{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    flex-wrap: wrap;
+    font-size: 25px;
+    padding: 5px;
+}
+.cart_box .leftpart .leftcard{
+    border: 1px solid rgba(167, 165, 165, 0.701);
+    margin-top: 2rem;
+    box-shadow: 1px 1px 10px gray;
+    border-radius: 10px;
+}
+.cart_box .leftpart .leftcard form{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 25px;
+    padding: 5px;
+}
+.cart_box .leftpart .leftcard .Photo img{
+    border-radius: 50%;
+    height: 5rem;
+    box-shadow: 1px 1px 5px gray;
+    width: 5rem;
+}
+
+.cart_box .leftpart .total_price{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap ;
+    font-size: 36px;
+    padding: 5px;
+}
+
+.cart_box .rightpart{
+    display: block;
+    text-align: center;
+    width: 35%;
+    margin-left: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+
+}
+
+
+.cart_box .rightpart .cart_total{
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    background-color: grey;
+}
+
+.cart_box .rightpart .subtotal{
+    display: flex;
+    justify-content: start;
+    padding-left: 23px;
+    height: 60px;
+    padding-top: 15px;
+    border-bottom: 1px solid black;
+}
+.cart_box .rightpart .total{
+    display: flex;
+    justify-content: start;
+    padding-left: 23px;
+    height: 50px;
+    border-bottom: 1px solid black;
+}
+
+.cart_box .rightpart .valcal{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart_box .rightpart .subtotal h1{
+    font-size: 30px;
+}
+
+
+
+.cart_box .rightpart .total h1{
+    font-size: 30px;
+}
+
+.cart_box .rightpart .cupon{
+    display: flex;
+    justify-content: start;
+    padding-left: 23px;
+    height: 120px;
+    
+}
+
+.cart_box .rightpart .checkout {
+    padding: 8px;
+}
+
+.cart_box .rightpart .checkout .btn2{
+    width: 90%;
+    height: 50px;
+    background-color: green;
+    font-size: 32px;
+    border-radius: 0;
+}

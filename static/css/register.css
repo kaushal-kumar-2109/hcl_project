@@ -1,0 +1,85 @@
+.priregisterform{
+    background-color: white;
+    width: 100%;
+    height: auto;
+    padding: 4rem 20%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.priregisterform form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.priregisterform form label{
+    width: 100%;
+    height: 2rem;
+    margin-top: 1rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+.priregisterform form input{
+    padding: 0 1rem;
+    width: 95%;
+    height: 2rem;
+    border-width: 0 0 2px 0;
+}
+
+
+/*          Register form css */
+
+.registerform{
+    background-color: white;
+    width: 100%;
+    height: auto;
+    padding: 4rem 20%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.registerform form{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.registerform form .part{
+    width: 49%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.registerform form .part a{
+    color: red;
+}
+.registerform form .part label{
+    width: 95%;
+    height: 2rem;
+    margin-top: 1rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+.registerform form .part input{
+    padding: 0 1rem;
+    width: 95%;
+    height: 2rem;
+    border-width: 0 0 2px 0;
+}
+.submit{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.submit button{
+    width: 50%;
+    height: 2rem;
+    background-color: rgba(16, 31, 64, 0.6);
+}
+.submit button:hover{
+    background-color: rgba(16, 31, 64, 0.9);
+}

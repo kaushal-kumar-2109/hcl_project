@@ -1,0 +1,30 @@
+{%extends "comman.html"%}
+{%block body%}
+
+  <div class="feedbackcon">
+    <p id="flag" style="display: none;">{{value}}</p>
+    <h1 id="flash">Email Sent Sucessfully !</h1>
+    <form action="http://127.0.0.1:5000/sending" method="POST">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="abc@gmail.com" required>
+        <br>
+        <hr>
+        <label for="Message">Message</label>
+        <textarea name="Message" id="Message" minlength="100" required placeholder="Input atleast 100 characters"></textarea>
+        <button>Submit</button>
+    </form>
+  </div>
+
+
+  <script>
+    const flag=document.getElementById('flag');
+    if (flag.innerText=='1'){
+      const flash=document.getElementById('flash');
+      flash.style.display='flex';
+      setTimeout((event) => {
+        flash.style.display='none';
+      }, 2000);
+    }
+  </script>
+ 
+{%endblock%}

@@ -1,0 +1,482 @@
+.shopbody{
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+}
+.headerbanner{
+    width: 100%;
+    display: flex;
+    height: 300px;
+    margin-top: 3px;
+    border: 2px solid gray;
+    border-top: 0;
+    box-shadow: 5px 5px 10px black;
+    margin-bottom: 2rem;
+}
+.headerbanner .rightpart{
+    width: 50%;
+
+    height: 100%;
+}
+.headerbanner .leftpartbanner{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.headerbanner .leftpartbanner a, img{
+    width: 50%;
+    padding: 0 0 3px 3px;
+    height: 50%;
+}
+.headerbanner .leftpartbanner img{
+    width: 100%;
+    height: 100%;
+}
+.headerbanner .rightpart img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Search styles */
+.searchnavbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 2px gray;
+    height: auto;
+    padding: 1rem 0rem;
+}
+li a{
+    text-shadow: 2px 2px 4px gray;
+}
+.Allproducts{
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 1rem;
+}
+.Allproducts .filerform{
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border: 2px solid gray;
+    border-left: 0;
+    box-shadow: 4px 4px 8px black;
+    padding: 1rem;
+    width: 30%;
+    height:auto;
+}
+.inccprice{
+  width: 20%;
+  display: flex;
+  cursor: pointer;
+  display: contents;
+  align-items: center;
+  border: 30px solid black;
+  border-style: groove;
+
+}
+.inccprice svg{
+  margin-top: -2px;
+  height: 15px;
+
+}
+.Allproducts .filerform form label,input,select{
+    width: 100%;
+}
+.Allproducts .filerform form select{
+    width: 100%;
+    height: 2rem;
+    border: 2px solid gray;
+}
+.Allproducts .filerform form .fash{
+    display: none;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    border: 2px solid gray;
+    padding: 0.5rem;
+    background-color: antiquewhite;
+}
+.Allproducts .filerform form .fash label,select,input{
+    width: 80%;
+    
+}
+.Allproducts .someproduct{
+    padding: 1rem;
+    width: 70%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+/*  card csss */
+
+/* From Uiverse.io by Smit-Prajapati */ 
+.parent {
+    max-width: 260px;
+    height: 300px;
+    min-width: 250px;
+    perspective: 1000px;
+    margin: 2rem;
+  }
+  
+  .card {
+    height: 100%;
+    margin: 2rem;
+    border-radius: 50px;
+    background: linear-gradient(135deg, rgb(78, 81, 80) 0%, rgb(33, 44, 37) 100%);
+    transition: all 0.5s ease-in-out;
+    transform-style: preserve-3d;
+    box-shadow: rgba(5, 71, 17, 0) 20px 20px 10px -40px, rgba(5, 71, 17, 0.2) 0px 25px 25px -5px;
+  }
+  
+  .glass {
+    transform-style: preserve-3d;
+    position: absolute;
+    inset: 8px;
+    border-radius: 55px;
+    border-top-right-radius: 100%;
+    background-color: gray;
+    /* background: linear-gradient(0deg, rgba(255, 255, 255, 0.349) 0%, rgba(255, 255, 255, 0.815) 100%); */
+    /* -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); */
+    transform: translate3d(0px, 0px, 25px);
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    transition: all 0.5s ease-in-out;
+  }
+  .glass img{
+    height: 100%;
+    width: 100%;
+    border-radius: 40px;
+  }
+  
+  .content {
+    padding: 100px 60px 0px 30px;
+    transform: translate3d(0, 0, 26px);
+  }
+  
+  .content .title {
+    display: block;
+    color: #00894d;
+    font-weight: 900;
+    font-size: 20px;
+  }
+  
+  .content .text {
+    display:block;
+    color: black;
+    height: 1.5rem;
+    width: 100%;
+    /* color: rgb(0, 137, 78); */
+    font-size: 15px;
+    margin-top: 90px;
+  }
+  
+  .content .text p{
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.5);
+    height:100%;
+    width: 100%;
+    font-weight: bold;
+    overflow: hidden;
+    display: none;
+    justify-content: center;
+    padding-left: 1rem;
+    color: white;
+    font-size: 15px;
+    margin-top: 80px;
+    transition: 1s;
+  }
+  .parent:hover .card .content .text p{
+    display: flex;
+  }
+  
+  .bottom {
+    padding: 10px 12px;
+    transform-style: preserve-3d;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translate3d(0, 0, 26px);
+  }
+  
+  .bottom .view-more {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    justify-content: flex-end;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .bottom .view-more:hover {
+    transform: translate3d(0, 0, 10px);
+  }
+  
+  .bottom .view-more .view-more-button {
+    background: none;
+    border: none;
+    color: #00c37b;
+    font-weight: bolder;
+    font-size: 12px;
+  }
+  
+  .bottom .view-more .svg {
+    fill: none;
+    stroke: #00c37b;
+    stroke-width: 3px;
+    max-height: 15px;
+  }
+  
+  .bottom .social-buttons-container {
+    display: flex;
+    gap: 10px;
+    transform-style: preserve-3d;
+  }
+  
+  .bottom .social-buttons-container .social-button {
+    width: 30px;
+    aspect-ratio: 1;
+    padding: 5px;
+    /* background: rgb(255, 255, 255); */
+    background: gray;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.45);
+    display: grid;
+    place-content: center;
+    box-shadow: rgba(5, 71, 17, 0.5) 0px 7px 5px -5px;
+  }
+  .bottom .social-buttons-container .social-button a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bottom .social-buttons-container .social-button a img{
+    height: 100%;
+    width: 100%;
+  }
+  
+  .bottom .social-buttons-container .social-button:first-child {
+    transition: transform 0.2s ease-in-out 0.4s, box-shadow 0.2s ease-in-out 0.4s;
+  }
+  
+  .bottom .social-buttons-container .social-button:nth-child(2) {
+    transition: transform 0.2s ease-in-out 0.6s, box-shadow 0.2s ease-in-out 0.6s;
+  }
+  
+  .bottom .social-buttons-container .social-button:nth-child(3) {
+    transition: transform 0.2s ease-in-out 0.8s, box-shadow 0.2s ease-in-out 0.8s;
+  }
+  
+  .bottom .social-buttons-container .social-button .svg {
+    width: 15px;
+    fill: #00894d;
+  }
+  
+  .bottom .social-buttons-container .social-button:hover .svg {
+    fill: white;
+  }
+  
+  .bottom .social-buttons-container .social-button:active {
+    background: rgb(255, 234, 0);
+  }
+  
+  .bottom .social-buttons-container .social-button:active .svg {
+    fill: black;
+  }
+  
+  .logo {
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    transform-style: preserve-3d;
+  }
+  
+  .logo .circle {
+    display: block;
+    position: absolute;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    border: 1px solid rgba(128, 128, 128, 0.658);
+    box-shadow: rgba(100, 100, 111, 0.2) -10px 10px 20px 0px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    background: rgba(122, 133, 131, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .logo .circle1 {
+    width: 170px;
+    transform: translate3d(0, 0, 20px);
+    top: 8px;
+    right: 8px;
+  }
+  
+  .logo .circle2 {
+    width: 140px;
+    transform: translate3d(0, 0, 40px);
+    top: 10px;
+    right: 10px;
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    transition-delay: 0.4s;
+  }
+  
+  .logo .circle3 {
+    width: 80px;
+    transform: translate3d(0, 0, 60px);
+    top: 17px;
+    right: 17px;
+    transition-delay: 0.8s;
+  }
+  
+  .logo .circle4 {
+    width: 60px;
+    transform: translate3d(0, 0, 80px);
+    top: 25px;
+    right: 25px;
+    transition-delay: 1.2s;
+  }
+  
+  .logo .circle5 {
+    width: 50px;
+    transform: translate3d(0, 0, 100px);
+    top: 30px;
+    right: 30px;
+    display: grid;
+    place-content: center;
+    transition-delay: 1.6s;
+  }
+  
+  .logo .circle5 .svg {
+    width: 20px;
+    fill: white;
+  }
+  
+  .parent:hover .card {
+    transform: rotate3d(1, 1, 0, 20deg);
+    box-shadow: rgba(5, 71, 17, 0.3) 15px 25px 12px -20px, rgba(5, 71, 17, 0.1) 0px 12px 15px 0px;
+  }
+  
+  .parent:hover .card .bottom .social-buttons-container .social-button {
+    transform: translate3d(0, 0, 50px);
+    box-shadow: rgba(5, 71, 17, 0.2) -5px 20px 10px 0px;
+  }
+  
+  .parent:hover .card .logo .circle2 {
+    transform: translate3d(0, 0, 60px);
+  }
+  
+  .parent:hover .card .logo .circle3 {
+    transform: translate3d(0, 0, 80px);
+  }
+  
+  .parent:hover .card .logo .circle4 {
+    transform: translate3d(0, 0, 100px);
+  }
+  
+  .parent:hover .card .logo .circle5 {
+    transform: translate3d(0, 0, 120px);
+  }
+
+
+
+
+  /* rest css*/
+
+  .shopbody .restallproducts{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2rem;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.fashion{
+  margin-top: 5rem;
+  /* border-bottom: 2px solid gray; */
+  box-shadow: 10px 10px 20px gray;
+  border-top-left-radius:20px ;
+  border-top-right-radius: 20px;
+  height: 350px;
+  background-color: white;
+  width: 90%;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding-bottom: 3rem;
+}
+.leftscrol{
+  height: 40px;
+  position: absolute;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  background-color:rgba(34, 33, 33, 0.296);
+  border-radius: 50%;
+  border: 1px solid rgb(87, 86, 86);
+}
+.leftscrol:hover{
+  height: 42px;
+  width: 42px;
+  background-color:rgba(34, 33, 33, 0.496);
+  border: 1px solid rgb(87, 86, 86);
+}
+.scrol1{
+  margin-right: 95%;
+}
+.scrol2{
+  margin-left:95%;
+}
+.scrol2 img{
+  rotate: 180deg;
+
+}
+h6 svg,label svg,.inccprice svg{
+  margin-top: -2px;
+  height: 15px;
+
+}
+
+
+/*   ..........................................invoice page css */
+
+
+.invocerbody{
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background-color: white;
+}
+.invocerbody .header{
+  font-family: Brush Script MT;
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+.invocerbody .header h4{
+  font-family: Brush Script MT;
+}

@@ -1,0 +1,229 @@
+*{
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+body{
+    display: flex;
+    align-items: flex-start;
+    padding:1rem 1rem;
+    height: 100vh;
+    justify-content: space-between;
+    background-color:white;
+}
+a{
+    text-decoration: none;
+}
+.leftnavbar{
+    width: 20%;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(34, 32, 32);
+    height: 100%;
+    padding: 1rem;
+}
+.leftnavbar a{
+    width: 100%;
+    border-top: 1px solid rgb(149, 143, 143);
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    height:2rem;
+}
+.leftnavbar a div{
+    display: flex;
+}
+.leftnavbar a div svg{
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+.leftnavbar a:hover{
+    border-right: 1px solid rgb(149, 143, 143);
+    border-left: 1px solid rgb(149, 143, 143);
+    margin-bottom: 1rem;
+    height: 4rem;
+}
+.analysis{
+    width: 80%;
+    overflow-y: auto;
+    height: 100%;
+    background-color: white;
+}
+.analysis .summary{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.analysis .summary .card{
+    margin-left: 0.6rem;
+    width:25%;
+    border: 0;
+    height: 10rem;
+    padding: 1rem;
+}
+.analysis .summary .card a{
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    height:100%;
+    width: 100%;
+}
+#a1{
+    background-image: url('https://github.com/kaushal-kumar-2109/inss_assets/blob/main/asests/a1.jpeg?raw=true');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#a2{
+    background-image: url('https://github.com/kaushal-kumar-2109/inss_assets/blob/main/asests/a2.jpeg?raw=true');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#a3{
+    background-image: url('https://github.com/kaushal-kumar-2109/inss_assets/blob/main/asests/a3.jpeg?raw=true');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#a4{
+    background-image: url('https://github.com/kaushal-kumar-2109/inss_assets/blob/main/asests/a4.jpeg?raw=true');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.toporderanalysis{
+    width: 100%;
+    justify-content: space-between;
+    height: auto;
+    display: flex;
+    padding: 1rem;
+}
+.toporderanalysis .topproduct{
+    box-shadow: 1px 1px 5px black;
+    width: 50%;
+    margin-left: 2rem;
+    padding: 0.5rem;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 20rem;
+    background-color: white;
+}
+
+.toporderanalysis .topproduct a{
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    height:100%;
+}
+.toporderanalysis .topproduct:hover{
+    overflow-y: scroll;
+}
+.toporderanalysis .topproduct a .usercard{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 5rem;
+    padding: 1rem;
+    box-shadow: 1px 1px 10px gray;
+    border: 1px solid gray;
+    background-color: rgba(182, 180, 180, 0.514);
+}
+.toporderanalysis .topproduct a .usercard svg{
+    height: 2rem;
+}
+.toporderanalysis .topproduct a .usercard img{
+    height: 3rem;
+    width: 4rem;
+}
+
+/* orders and transection css ...  */
+
+.ordersarea{
+    width: 100%;
+    padding: 0 0 0 1.5rem;
+}
+.ordersarea .selector{
+    width: 100%;
+    display: flex;
+    padding: 0.5rem;
+    padding-top: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+    border: 1px solid gray;
+    background-color: rgb(34, 32, 32);
+}
+
+.ordersarea .selector h3{
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+    transition: 0.5s;
+}
+.non_selected:hover{
+    border: 1px solid gray;
+    border-top:0;
+    transition: 0.5s;
+}
+.selected{
+    box-shadow: 1px 1px 15px gray;
+    border: 1px solid gray;
+    border-top:0;
+}
+
+.ordersarea .products{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 0rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    border-radius: 0;
+    border-top: 1px solid gray;
+}
+
+.ordersarea .products .card{
+    padding: 1rem;
+    height: 26rem;
+    margin: 1rem;
+    overflow: hidden;
+    width: 22rem;
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.543);
+    box-shadow: 1px 1px 15px gray;
+}
+.ordersarea .products .card:hover{
+    height: auto;
+}
+.ordersarea .products .card .imagecon{
+    padding: 0.5rem;
+    border-bottom: 1px solid gray;
+    border-radius: 0;
+    width: 100%;
+    height: 20rem;
+}
+
+.ordersarea .products .card .imagecon img{
+    height: 100%;
+    width: 100%;
+}
+.ordersarea .products .card .datacon h5{
+    border-radius: 0;
+    padding: 0.5rem;
+    color: gray;
+    border-top: 1px solid gray;
+}
+
+#allorders{
+    display: flex;
+}
+#neworder{
+    display: none;
+}
+#oldorder{
+    display: none;
+}

@@ -1,0 +1,82 @@
+{%extends "comman.html"%}
+{%block body%}
+
+<div class="cartbody">
+
+    <div class="main_box">
+        <a ><button class="btn">SHOPPING CART</button></a>
+        <i class="fas fa-arrow-right"></i> 
+        <a href=""><button class="btn">CHECKOUT DETAILS</button></a>
+        <i class="fas fa-arrow-right"></i> 
+        <a href=""><button class="btn"><i class="fas fa-check-circle"></i> ORDER COMPLETE</button></a>
+    </div>
+
+
+    <div class="cart_box">
+        <div class="leftpart">
+            <!---photo box-->
+
+{%for i in range(length): %}
+
+            <div class="leftcard">
+                <div class="Photo">
+                    <img src="{{fdata[i][0]}}" alt="photo">
+                </div>
+                
+                <!--quantity -->
+            <form method="post" action="http://127.0.0.1:5000/{{pdata[i][0]}}/change/value">
+                <div class="product_quantity">
+                            <button type="button" onclick="this.nextElementSibling.stepDown()" style=" color: black;">-</button>
+                            <input type="number" name="quantity" value="{{pdata[i][3]}}" min="0">
+                            <button type="button" onclick="this.previousElementSibling.stepUp()"style=" color: black;">+</button>
+                </div>
+    
+                <!--Price-->
+                <div class="money">
+                    <button type="submit">change</button>
+                </div>
+            </form>
+                <div class="total_price"> &#x20b9; &nbsp; {{fdata[i][1]*pdata[i][3]}}</div>
+            </div>
+            
+{%endfor%}
+
+        </div>
+
+
+        <div class="rightpart">
+            <div class="cart_total">Cart Total</div>
+            <div class="subtotal valcal">
+                <h1>Subtotal:</h1>
+                <h1>&#x20b9; &nbsp;
+                   {{v}}
+                </h1>
+            </div>
+            <div class="subtotal valcal">
+                <h1>Discount:</h1>
+                <h1>10%</h1>
+            </div>
+            <div class="total valcal">
+                <h1>Total:</h1>
+                <h1>&#x20b9; &nbsp; 
+                    {{v-sbv}}
+                </h1>
+            </div>
+            <div class="cupon">
+            <!-- <h1 style="font-size: 20px;">any cupon?</h1> -->
+            </div>
+
+
+            <div class="checkout">
+                <form action="http://127.0.0.1:5000/sfea/{{v-sbv}}/checkOut" method="post" >
+                    <button class="btn2" style="height: 3rem; width:100%;">checkout</button>
+                </form>
+            </div>
+
+            
+        </div>
+    </div>
+
+
+</div>
+{%endblock%}

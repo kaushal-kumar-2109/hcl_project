@@ -1,0 +1,23 @@
+{%extends "comman.html"%}
+{%block body%}
+   <div class="conformdelte">
+    <div class="message">
+        <h4>Are You Sure To Delete The Product.</h4>
+    </div>
+    <div class="productToDelete">
+        <div class="imageOfProduct">
+            <img src="{{data[0][7]}}" alt="Product Image">
+        </div>
+        <div class="productdata">
+            <h5 class="name">{{data[0][2]}}</h5>
+            <h5 class="price">$ {{data[0][3]}}</h5>
+            <h5 class="discount">{{data[0][5]}} kg</h5>
+            <h5 class="material">{{data[0][4]}}</h5>
+            <h5 class="quantity">{{data[0][6]}}</h5>
+            <h5 class="dimand">{{data[0][10]}}</h5>
+        </div>
+    </div>
+    <a href="http://127.0.0.1:5000/delted/{{data[0][0]}}/{{data[0][1]}}"><button>DELETE</button></a>
+   </div>
+    
+{%endblock%}

@@ -1,0 +1,236 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Pinyon+Script&display=swap');
+
+*{
+    background: transparent;
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    /* font-family: Brush Script MT; */
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(4, 57, 4);
+}
+a{
+    text-decoration: none;
+}
+#brand{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    font-weight: bolder;
+    font-style: italic;
+    letter-spacing: 5px;
+}
+button{
+    height: 2rem;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    background-color: rgba(16, 31, 64, 0.6);
+    box-shadow: 2px 2px 3px black;
+}
+button:hover{
+    background-color: rgba(16, 31, 64, 0.9);
+}
+.imagediv{
+    position: fixed;
+    height: 800px;
+    width: 100%;
+    z-index: -10;
+}
+.imagediv video{
+    height: 100%;
+    width: 100%;
+    margin-top: -3rem;
+}
+.navbar{
+    width: 100%;
+    min-height: 10rem;
+    padding: 1rem 2rem;
+}
+.brand{
+    display: none;
+}
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-nav{
+    position: absolute;
+    margin-left: 15%;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+   
+}
+.navbar-nav a{
+    font-size: 20px;
+    width: auto;
+    display: flex;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+.navbar-nav a .value{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: white;
+    margin-left: 75px;
+    background-color: rgba(31, 220, 6, 0.781);
+}
+.navbar-nav svg{
+    height: 1rem;
+    margin-right: 0.3rem;
+    margin-top: -4px;
+}
+.navbar-nav a:hover{
+    transition: 0.3s;
+    opacity: 1;
+    font-weight: bold;
+    text-decoration:white;
+    font-size: x-large;
+    box-shadow: 2px 2px 5px white;
+}
+.Con-Body{
+    height:auto;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:start;
+    padding: 2rem 0rem 0rem 0rem;
+    background-image: linear-gradient(to right,transparent,rgba(0, 0, 0,0.8),rgba(0, 0, 0));
+}
+.nav-con{
+    margin-top: 8rem;
+    width: 100%;
+    padding: 1rem;
+}
+.nav-con p,.nav-con h1{
+    width: 50%;
+    color: white;
+}
+.nav-con button{
+    border: 2px solid white;
+    border-style: groove;
+    margin-top: 4rem;
+    height: 4rem;
+    width: 10rem;
+    margin-bottom: 2rem;
+}
+.footer{
+    width: 100%;
+    height: 30rem;
+    padding: 4rem 0rem;
+    background-color: black;
+}
+.footer .top{
+    height: 80%;
+    width: 100%;
+    display: flex;
+}
+.footer .top .part{
+    height: 100%;
+    width: 25%;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+}
+.footer .top .part form input{
+    padding: 0rem 1rem;
+    border: 1px solid white;
+    color: white;
+    background-color: rgb(51, 50, 50);
+}
+.footer .top .part form button{
+    padding: 0rem 1rem;
+    margin-top: 2rem;
+    border: 1px solid white;
+    color: white;
+    background-color: rgb(51, 50, 50);
+}
+.footer .top .part form button:hover{
+    background-color: rgb(154, 150, 150);
+}
+.footer .top .part .s{
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: flex-start;
+}
+.footer .top .part .s svg{
+    height: 2rem;
+    width: 2rem;
+}
+.footer .top .part p,h3,a ,.footer .botum p{
+    color: white;
+    width: 100%;
+}
+.footer .botum{
+    height: 20%;
+    margin-top: 10px;
+    border-top: 1px solid gray;
+    padding:4rem 0% 0% 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.footer .botum p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+@media (width<800px) {
+    .brand{
+        display:flex;
+    }
+    .navbar{
+        width: 100%;
+        padding: 1rem 2rem;
+    }
+    .brand1{
+        display: none;
+    }
+    .Con-Body{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: self-start;
+    }
+    .container-fluid{
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+    }
+
+    .imagediv{
+        position: fixed;
+        height: 900px;
+        width: 100%;
+        z-index: -10;
+    }
+    .imagediv video{
+        height: 100%;
+        width: fit-content;
+    }
+}
